@@ -8,6 +8,7 @@ package paquete03;
 import paquete04.OperadorUno;
 import paquete04.OperadorDos;
 import paquete05.OperadorTres;
+import paquete06.imprimirMensaje;
 
 // import paquete04.*;
 /**
@@ -22,11 +23,12 @@ public class Principal {
         int suma = OperadorDos.obtenerSuma(valorA, valorB);
         int multiplicacion = OperadorTres.obtenerMultiplicacion(valorA, 
                                                                 valorB);
-        System.out.printf("La suma de %d + %d es igual a: %d\n"
-                + "La multiplicacion de %d * %d es igual a: %d\n",
-                valorA,valorB,
-                suma,
-                valorA, valorB,
-                multiplicacion);
+   
+        imprimirMensaje.imprimirMensaje(valorA, valorB, suma, multiplicacion);
+        
+        // primero se importa el paquete06 en donde se va a imprimir el mensaje,
+        // luego se crea desde el main la funcion en la que se va a imprimir
+        // se llama a la funcion y la funcion dentro del paquete06 se encargara
+        // de retornar lo que se va a presentar en pantalla
     }
 }
