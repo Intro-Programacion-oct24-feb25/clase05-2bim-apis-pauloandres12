@@ -9,19 +9,26 @@ import java.security.SecureRandom;
 
 
 public class Operador {
-    
+
+    public static void presentarDatos(int a, int b, int c) {
+        System.out.printf("La suma de %d + %d es igual a: %d\n",
+                a,
+                b,
+                c);
+    }
+
     public static int obtenerNumero() {
         // objeto generador de números aleatorios
         SecureRandom numerosAleatorios = new SecureRandom();
-        
+
         // Returns a pseudorandom, uniformly distributed int value 
         // between 0 (inclusive) and the specified value (exclusive)
         int valorAleatorio = numerosAleatorios.nextInt(5);
         return valorAleatorio;
     }
-    
-    public static int obtenerSuma(int a, int b){
+
+    public static int obtenerSuma(int a, int b) {
         return a + b;
     }
-    
+
 }
